@@ -5,9 +5,25 @@ type person{
     age: Int!
 }
 
+type API {
+    id:Int!
+    title:String!
+    rating:Float!
+    summary:String
+    language:String
+    medium_cover_image:String!
+}
+
 type Query {
     people: [person]!
     person(id:Int!) : person
+    getmovie(limit:Int, rating:Float): [API]!
+    
+}
+
+type Mutation{
+    addPeople(name:String!, age:Int!):person!
+    deletePeople(id:Int!): Boolean!
 }
 
 

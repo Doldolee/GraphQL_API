@@ -18,7 +18,7 @@ export const getByid = id => {
 }
 
 export const deletePeople = id => {
-    const cleanedPeople = people.fileter(person=> person.id === id)
+    const cleanedPeople = people.filter(person=> person.id !== id)
     if(people.length > cleanedPeople.length){
         people = cleanedPeople;
         return true;
@@ -27,3 +27,12 @@ export const deletePeople = id => {
     }
 }
 
+export const addPeople = (name, age)=>{
+    let newPeople = {
+        id:`${people.length+1}`,
+        name,
+        age
+    }
+    people.push(newPeople)
+    return newPeople
+}
