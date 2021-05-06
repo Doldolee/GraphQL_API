@@ -1,2 +1,5 @@
 # nomad_graphql
-movie api
+GraphQL
+
+#API
+#GraphQL
